@@ -18,3 +18,13 @@ class MnMarketingApp(AppConfig):
         description = _(
             "Replaces the default pretix landing page with the MN Marketing branding."
         )
+
+    def ready(self):
+        # Auto-register the branding middleware so the control-panel top-bar
+        # icon is swapped without any admin action.
+        from django.conf import settings
+        mw = 'pretix_mn_marketing.middleware.MnBrandingMiddleware'
+        middleware = list(settings.MIDDLEWARE)
+        if mw not in middleware:
+            middleware.append(mw)
+            settings.MIDDLEWARE = middleware
