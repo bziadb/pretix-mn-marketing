@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" width="100" height="60"
      preserveAspectRatio="xMidYMid meet">
-    <path fill="#ffffff" d="M 6 55 L 6 22 C 6 12, 16 8, 25 8 C 34 8, 44 12, 44 22 L 44 55 L 33 55 L 33 24 C 33 20, 29 18, 25 18 C 21 18, 17 20, 17 24 L 17 55 Z"/>
-    <path fill="#ffffff" d="M 48 55 L 48 22 C 48 12, 58 8, 67 8 C 76 8, 86 12, 86 22 L 86 55 L 75 55 L 75 24 C 75 20, 71 18, 67 18 C 63 18, 59 20, 59 24 L 59 55 Z"/>
+    <!-- Blue "m" arch (brand color #447FB9) -->
+    <path fill="#447FB9" d="M 6 55 L 6 22 C 6 12, 16 6, 25 6 C 34 6, 44 12, 44 22 L 44 55 L 33 55 L 33 24 C 33 20, 29 17, 25 17 C 21 17, 17 20, 17 24 L 17 55 Z"/>
+    <!-- Magenta "n" arch (brand color #731183) -->
+    <path fill="#731183" d="M 48 55 L 48 22 C 48 12, 58 6, 67 6 C 76 6, 86 12, 86 22 L 86 55 L 75 55 L 75 24 C 75 20, 71 17, 67 17 C 63 17, 59 20, 59 24 L 59 55 Z"/>
 </svg>
