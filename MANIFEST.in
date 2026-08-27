@@ -1,0 +1,5 @@
+recursive-include pretix_mn_marketing/templates *.html
+recursive-include pretix_mn_marketing/static *
+recursive-include pretix_mn_marketing/migrations *.py
+include README.md
+include LICENSE

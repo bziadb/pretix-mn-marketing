@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="{{ lang_code }}"{% if is_rtl %} dir="rtl"{% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MN Marketing Network</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'pretixplugins/mn_marketing/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'pretixplugins/mn_marketing/style.css' %}">
+</head>
+<body>
+    <div class="wrap">
+        <div class="card">
+            <div class="card-body">
+                <img src="{% static 'pretixplugins/mn_marketing/logo.png' %}"
+                     alt="MN Marketing Network" class="logo">
+                <h1>{{ t.hello }}</h1>
+                <p class="tagline">{{ t.welcome|safe }}</p>
+                <div class="body">
+                    <p>{{ t.p_platform }}</p>
+                    <p>{{ t.p_contact }}</p>
+                    <p><strong>{{ t.enjoy }}</strong></p>
+                </div>
+                <div class="cta-row">
+                    <a class="btn btn-primary" href="/control/">{{ t.login }}</a>
+                    <a class="btn btn-ghost" href="{{ contact_url }}" target="_blank" rel="noopener">{{ t.contact }}</a>
+                </div>
+            </div>
+            <div class="footer">
+                <span>© MN Marketing Network e.U.</span>
+                <span>{{ t.poweredby }} <strong>pretix</strong></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

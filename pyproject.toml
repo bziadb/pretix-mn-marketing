@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pretix-mn-marketing"
+version = "0.1.0"
+description = "Custom MN Marketing branded landing page for the pretix root URL."
+readme = "README.md"
+license = {text = "AGPL-3.0-or-later"}
+requires-python = ">=3.11"
+authors = [{name = "MN Marketing Network e.U.", email = "office@mn-marketing.at"}]
+classifiers = [
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pretix>=2024.1",
+]
+
+[project.entry-points."pretix.plugin"]
+pretix_mn_marketing = "pretix_mn_marketing.apps:MnMarketingApp"
+
+[project.urls]
+homepage = "https://github.com/bziadb/pretix-mn-marketing"
+source   = "https://github.com/bziadb/pretix-mn-marketing"
+
+[tool.setuptools.packages.find]
+include = ["pretix_mn_marketing*"]
+
+[tool.setuptools.package-data]
+"pretix_mn_marketing" = [
+    "templates/**/*.html",
+    "static/**/*",
+    "migrations/*.py",
+]
