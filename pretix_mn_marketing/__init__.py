@@ -1,1 +1,1 @@
-default_app_config = "pretix_mn_marketing.apps.MnMarketingApp"
+from .apps import MnMarketingApp  # noqa: F401 (exposed for pretix entry point)

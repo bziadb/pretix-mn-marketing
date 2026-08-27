@@ -21,7 +21,7 @@ dependencies = [
 ]
 
 [project.entry-points."pretix.plugin"]
-pretix_mn_marketing = "pretix_mn_marketing.apps:MnMarketingApp"
+pretix_mn_marketing = "pretix_mn_marketing:MnMarketingApp"
 
 [project.urls]
 homepage = "https://github.com/bziadb/pretix-mn-marketing"
