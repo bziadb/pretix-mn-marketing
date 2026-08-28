@@ -20,9 +20,13 @@ try:
 except FileNotFoundError:
     _DATA_URI = ""
 
-# Matches the pretix icon URL, with or without a Manifest hash suffix.
+# Matches BOTH pretix logos, with or without a Manifest hash suffix:
+#   - pretix-icon-white-mini.svg → top-bar icon on dashboard pages
+#   - pretix-logo.svg            → big logo on auth pages (login, forgot, register)
 _ICON_RE = re.compile(
-    rb"/static/pretixbase/img/pretix-icon-white-mini(?:\.[a-f0-9]+)?\.svg"
+    rb"/static/pretixbase/img/pretix"
+    rb"(?:-icon-white-mini|-logo)"
+    rb"(?:\.[a-f0-9]+)?\.svg"
 )
 
 
